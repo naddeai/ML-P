@@ -9,7 +9,7 @@ with open('artifacts/options_categorical.json', 'r') as f:
 with open('artifacts/options_numerical.json', 'r') as f:
     options_numerical = json.load(f)
     
-with open('artifacts/pipeline.pkl', 'rb') as f:
+with open('artifacts/pipeline_mpg.pkl', 'rb') as f:
     model = pickle.load(f)
 
 
@@ -37,8 +37,8 @@ if button:
 
     with st.spinner('Calculating...'):
 
-        probs = model.predict_proba(df_input)
-        prob = probs[0][1] * 100
+        probs = model.predict(df_input)
+        prob = probs[0]
         
         message_base = 'Your approval probability for a credit card is '
         prob_str = f'{prob:.2f}%'

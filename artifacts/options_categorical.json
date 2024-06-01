@@ -1,33 +1,14 @@
 {
-    "Industry": [
-        "CommunicationServices",
-        "ConsumerDiscretionary",
-        "ConsumerStaples",
-        "Education",
-        "Energy",
-        "Financials",
-        "Healthcare",
-        "Industrials",
-        "InformationTechnology",
-        "Materials",
-        "Real Estate",
-        "Research",
-        "Transport",
-        "Utilities"
+    "cylinders": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
     ],
-    "Ethnicity": [
-        "Asian",
-        "Black",
-        "Latino",
-        "Other",
-        "White"
-    ],
-    "Gender": [
-        "Female",
-        "Male"
-    ],
-    "CivilStatus": [
-        "Married",
-        "Other"
+    "origin": [
+        "europe",
+        "japan",
+        "usa"
     ]
 }
