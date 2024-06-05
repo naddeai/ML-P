@@ -4,8 +4,8 @@
     "cpus": 4
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "python -m pip install -r requirements.txt && python -m pip install ruff",
-  "postCreateCommand": "python -m ipykernel install --user --name devcontainer-kernel --display-name 'Python (devcontainer)'",
+  "updateContentCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "./.devcontainer/post-create.sh",
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
   "customizations": {
     "codespaces": {
@@ -40,7 +40,7 @@
         },
         "jupyter.jupyterServer.kernel": "devcontainer-kernel", // Default kernel for Jupyter
         "jupyter.notebook.defaultKernel": "devcontainer-kernel", // Default kernel for notebooks
-        "python.pythonPath": "/usr/local/bin/python", // Default Python path
+        "python.pythonPath": "/usr/local/bin/python" // Default Python path
       },
       "remoteUser": "vscode"
     }
